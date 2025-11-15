@@ -49,38 +49,44 @@ const showcase = [
 export default function Page() {
   return (
     <main className="min-h-screen bg-[#07070d] text-white font-sans scroll-smooth">
-      {/* NAVBAR */}
-      <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-lg bg-black/30 border-b border-white/10 px-6 py-4 flex justify-between items-center">
-        <div className="text-xl font-bold bg-gradient-to-r from-fuchsia-400 to-cyan-400 bg-clip-text text-transparent">
+     {/* NAVBAR */}
+<nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-lg bg-black/30 border-b border-white/10 px-6 py-3">
+  <div className="max-w-6xl mx-auto flex items-center justify-between gap-6">
+    
+    {/* Logo + branding */}
+    <div className="flex items-center gap-3">
+      <Image
+        src="/images/logo-eventurella.png"
+        alt="Eventurella logo"
+        width={40}
+        height={40}
+        className="rounded-full object-contain"
+      />
+      <div>
+        <p className="text-xs uppercase tracking-[0.2em] text-white/40">
+          Event styling studio
+        </p>
+        <p className="text-lg font-semibold bg-gradient-to-r from-fuchsia-400 to-cyan-300 bg-clip-text text-transparent">
           Eventurella
-        </div>
-        <div className="hidden md:flex gap-6 text-sm opacity-80">
-          <a href="#home" className="hover:text-white">
-            Home
-          </a>
-          <a href="#services" className="hover:text-white">
-            Services
-          </a>
-          <a href="#weddings" className="hover:text-white">
-            Weddings
-          </a>
-          <a href="#showcase" className="hover:text-white">
-            Portfolio
-          </a>
-          <a href="#pricing" className="hover:text-white">
-            Prijzen
-          </a>
-          <a href="#giftshop" className="hover:text-white">
-            Giftshop
-          </a>
-          <a href="#about" className="hover:text-white">
-            Over ons
-          </a>
-          <a href="#contact" className="hover:text-white">
-            Contact
-          </a>
-        </div>
-      </nav>
+        </p>
+      </div>
+    </div>
+
+    {/* Menu links */}
+    <div className="hidden md:flex gap-6 text-sm opacity-80">
+      <a href="#home" className="hover:text-white">Home</a>
+      <a href="#services" className="hover:text-white">Services</a>
+      <a href="#weddings" className="hover:text-white">Weddings</a>
+      <a href="#showcase" className="hover:text-white">Portfolio</a>
+      <a href="#pricing" className="hover:text-white">Prijzen</a>
+      <a href="#giftshop" className="hover:text-white">Giftshop</a>
+      <a href="#about" className="hover:text-white">Over ons</a>
+      <a href="#contact" className="hover:text-white">Contact</a>
+    </div>
+
+  </div>
+</nav>
+
 
       {/* HERO */}
       <section
